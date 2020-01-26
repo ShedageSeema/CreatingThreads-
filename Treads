@@ -1,0 +1,36 @@
+#include<iostream>
+
+Using namespace std;
+DWORD WINAPI ThreadFun(LPVOID 1pParam)
+{ 
+Cout<<“Thread Running”<<endl;
+Return 0;
+
+}
+Int main()
+{
+HANDLE hThread;
+DWORD ThreadID;
+
+hThread = CreateThread(
+NULL, 
+0,
+ThreadFun,
+NULL,
+0,
+&ThreadID);
+
+If (hThreads==NULL)
+{
+Cout<<“Thread Creation Failed & Error NO—-> “ <<GetLastError()<<endl;
+
+}
+Cout<<“Thread Creation Success”<<endl;
+Cout<<“ThreadID”<<ThreadID<<endl;
+CloseHangle(thread);
+
+
+System(“PAUSE”);
+Return 0;
+}
+
